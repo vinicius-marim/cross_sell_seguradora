@@ -1,36 +1,44 @@
 
-## Cross-Sell de Seguro de Saúde
+# Saúde ao Alcance: Otimizando Vendas de Planos de Saúde para Clientes de Seguros Automotivos 🏥🚗
 
-**Sobre**
+Nosso projeto foi além de dados e modelos de previsão. Ele trouxe para a seguradora uma nova forma de conectar clientes automotivos a planos de saúde, usando inteligência de dados para otimizar uma campanha de cross-sell e transformar desafios em oportunidades.
 
-Este projeto visa otimizar as vendas de planos de saúde para clientes de uma seguradora já estabelecida no ramo de seguros automotivos.
+### O Contexto
 
-Contexto: A seguradora iniciou uma campanha de oferta de planos de saúde para sua base de clientes automotivos(Cross-Sell), mas a taxa média de conversão estava abaixo de 12.2%. Diante dos custos associados à oferta, a seguradora buscou nossa equipe de analistas de dados para desenvolver soluções inteligentes visando melhorar a taxa de conversão.
+Imagine uma seguradora com uma carteira repleta de clientes automotivos. Ao lançar uma oferta de planos de saúde para esses clientes, a expectativa era alta. Porém, a taxa de conversão mal chegava a 12,2%. Diante desse cenário, nossa equipe de dados foi acionada: **será que podemos aumentar essa taxa e gerar valor significativo?**
 
-Nossa abordagem incluiu a Análise Exploratória dos Dados para melhor entender os dados e fornecer insights relevantes por meio de análises de correlação e cohort's. Posteriormente, desenvolvemos um modelo de machine learning para identificar padrões em clientes mais propensos a adquirir o plano de saúde oferecido pela seguradora. E, por fim, desenvolver uma API para facilitar a integração do output do modelo preditivo aos demais setores da seguradora.
+### Explorando o Potencial 🚀
 
-**Principais Insights da EDA:**
+Com uma análise de dados aprofundada, partimos para a compreensão dos padrões de compra. Surpreendentemente, encontramos algumas revelações:
+- **Pessoas entre 33 e 48 anos** se destacaram, com uma taxa de conversão acima de 20%, muito superior à média.
 
-- Clientes entre 33 e 48 anos estão mais propensos à compra do novo seguro, superior a 20%, contrastando com a média geral de 12.2% (Veja EDA 4.1)
-- Diferentes Canais de Vendas possuem diferentes eficiência. Os Top 5 canais conseguem converter de 25-30%, porém (Veja EDA 9.0).
-- **Urgência: Problema Grave de Fidelização -** Clientes que adquiriram o seguro de saúde previamente, possuem nível de conversão abaixo de 0.1%. A base de dados não nos forneceu informações para encontrar a causa-raiz deste fenômeno. Contuto, levantamos duas hipóteses, 1- O serviço oferecido no passado possuia qualidade deficiente, ou 2- O cliente encontrou serviço com melhor custo-benefício em outra seguradora.
+![Propensão por idade]("https://github.com/vinicius-marim/cross_sell_seguradora/blob/main/img_1.png")
 
-**Resultado do modelo preditivo:**
+- Descobrimos que os **canais de vendas fazem toda a diferença**: os melhores canais conseguiram taxas de 25% a 30% de conversão!
+- No entanto, uma **questão crítica de fidelização** chamou nossa atenção: clientes anteriores de seguro de saúde **quase não demonstraram interesse em renovar o plano**. Isso aponta para uma necessidade urgente de entender se o problema é percepção de qualidade ou uma oferta mais competitiva dos concorrentes.
 
-Realizado stacking de LightGBM com GradientBoostingClassifier, utilizando a técnica de ranqueamento. O modelo obteve ótimos resultados na base de testes de 95k clientes.
+| Anteriormente Segurado | Propensão | Proporção  |
+|------------------------|----------|------------|
+| Não                    | Negativa      | 0.774546   |
+| Não                    | Positiva      | 0.225454   |
+| Sim                    | Negativa      | 0.999095   |
+| Sim                    | Positiva      | 0.000905   |
 
-Dos 95k clientes totais, os primeiros 25k clientes rankeados pelo algorítmo apresentou precisão de 33.4%, conversão de 8,350 clientes do total de 11,600, ou seja, o modelo foi capaz de capturar 71.8% de todos os clientes "conversíveis" (Vide Model 4.0)
+### A Resposta Inteligente 💡
 
-Com base na mediana do prêmio anual de Rp$ 33,000.00 (Mais detalhes EDA 9.0), a conversão dos 8,350 clientes representaria Rp 275,550,000.00 de faturamento. Equivalente a 162.574.450,00 reais.
+Para resolver o problema, utilizamos técnicas avançadas para identificar, entre milhares de clientes, aqueles com maior potencial de conversão. Os resultados foram surpreendentes: Dos 11.600 clientes, **8.350 clientes converteram**, capturando assim 71,8% de todos os clientes com potencial de compra. Um verdadeiro impacto que vai além dos números.
 
-**Notebooks Jupyter:**
+### O Impacto em Números 📈
 
-* Três notebooks fazem parte do projeto: "EDA", "Model" e "Deploy_config", cada um dedicado a diferentes fases do desenvolvimento.
+Com base nos valores de prêmio anual, nossa projeção de conversão representa **R$ 275 milhões em faturamento adicional**. Não é só sobre a precisão dos dados; é sobre resultados tangíveis que impulsionam o negócio e permitem um retorno muito além das expectativas.
 
-**Requisitos:**
+### Para o Futuro
 
-* Um arquivo requirements.txt lista todas as ferramentas necessárias para reproduzir o projeto.
+A questão da fidelização do produto exige uma investigação mais profunda, assim recomendamos que o time de suporte realize pesquisas de satisfação com os clientes o mais breve possível. Isso ajudará a identificar as causas dessa falha crítica e a definir estratégias para reforçar a retenção e reduzir o CAC(Custo de Aquisição de Clientes).
+Ademais, o projeto não se encerra na análise de dados e na criação de modelos. Ele foi estruturado com uma API flexível que pode ser integrada a sistemas de CRM. 
+Assim, as equipes de vendas têm acesso direto às previsões de maior potencial, otimizando seu foco para alcançar resultados ainda mais expressivos. Estamos animados para ver como essa estratégia de vendas vai evoluir e continuar a gerar resultados.
 
-**Estrutura do Projeto:**
+---
 
-* Dois subdiretórios compõem o projeto: "api", que armazena os arquivos necessários a sua execução, e o diretório de dados fonte, chamado "data".
+Esse projeto é um exemplo claro de como **inteligência de dados** pode transformar uma iniciativa de cross-sell em uma ferramenta poderosa para crescimento e fidelização. Seja bem-vindo a conhecer mais sobre o projeto e como ele pode inspirar o próximo passo para sua empresa!
+
