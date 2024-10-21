@@ -26,15 +26,16 @@ Com uma análise de dados aprofundada, partimos para a compreensão dos padrões
 
 ### A Resposta Inteligente 💡
 
-Para resolver o problema, utilizamos técnicas avançadas para identificar, entre milhares de clientes, aqueles com maior potencial de conversão. Os resultados foram surpreendentes: Dos 11.600 clientes, **8.350 clientes converteram**, capturando assim 71,8% de todos os clientes com potencial de compra. Um verdadeiro impacto que vai além dos números.
+Para resolver o problema, utilizamos técnicas avançadas para identificar, entre milhares de clientes, aqueles com maior potencial de conversão. Os resultados foram surpreendentes: Dos 20.000 top clientes do ranking, **16.700 clientes converteram**, capturando assim 83,6% de todos os 60.000 clientes da base de dados. Um verdadeiro impacto que vai além dos números.
 
 ### O Impacto em Números 📈
 
-Com base nos valores de prêmio anual, nossa projeção de conversão representa **R$ 275 milhões em faturamento adicional**. Não é só sobre a precisão dos dados; é sobre resultados tangíveis que impulsionam o negócio e permitem um retorno muito além das expectativas.
+Com base nos valores de prêmio anual, nossa projeção de conversão representa mais **R$ 500 milhões em faturamento**. Não é só sobre a precisão dos dados; é sobre resultados tangíveis que impulsionam o negócio e permitem um retorno muito além das expectativas.
 
 ### Para o Futuro
 
 A questão da fidelização do produto exige uma investigação mais profunda, assim recomendamos que o time de suporte realize pesquisas de satisfação com os clientes o mais breve possível. Isso ajudará a identificar as causas dessa falha crítica e a definir estratégias para reforçar a retenção e reduzir o CAC(Custo de Aquisição de Clientes).
+
 Ademais, o projeto não se encerra na análise de dados e na criação de modelos. Ele foi estruturado com uma API flexível que pode ser integrada a sistemas de CRM. 
 Assim, as equipes de vendas têm acesso direto às previsões de maior potencial, otimizando seu foco para alcançar resultados ainda mais expressivos. Estamos animados para ver como essa estratégia de vendas vai evoluir e continuar a gerar resultados.
 
