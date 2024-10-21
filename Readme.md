@@ -12,7 +12,7 @@ Imagine uma seguradora com uma carteira repleta de clientes automotivos. Ao lan�
 Com uma análise de dados aprofundada, partimos para a compreensão dos padrões de compra. Surpreendentemente, encontramos algumas revelações:
 - **Pessoas entre 33 e 48 anos** se destacaram, com uma taxa de conversão acima de 20%, muito superior à média.
 
-![Propensão por idade]("https://github.com/vinicius-marim/cross_sell_seguradora/blob/main/img_1.png")
+![Propensão por idade](img_1.png)
 
 - Descobrimos que os **canais de vendas fazem toda a diferença**: os melhores canais conseguiram taxas de 25% a 30% de conversão!
 - No entanto, uma **questão crítica de fidelização** chamou nossa atenção: clientes anteriores de seguro de saúde **quase não demonstraram interesse em renovar o plano**. Isso aponta para uma necessidade urgente de entender se o problema é percepção de qualidade ou uma oferta mais competitiva dos concorrentes.
