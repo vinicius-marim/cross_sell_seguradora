@@ -17,20 +17,20 @@ Com uma análise de dados aprofundada, partimos para a compreensão dos padrões
 - Descobrimos que os **canais de vendas fazem toda a diferença**: os melhores canais conseguiram taxas de 25% a 30% de conversão!
 - No entanto, uma **questão crítica de fidelização** chamou nossa atenção: clientes anteriores de seguro de saúde **quase não demonstraram interesse em renovar o plano**. Isso aponta para uma necessidade urgente de entender se o problema é percepção de qualidade ou uma oferta mais competitiva dos concorrentes.
 
-| Anteriormente Segurado | Propensão | Proporção  |
-|------------------------|----------|------------|
-| Não                    | Negativa      | 0.774546   |
-| Não                    | Positiva      | 0.225454   |
-| Sim                    | Negativa      | 0.999095   |
-| Sim                    | Positiva      | 0.000905   |
+  | Anteriormente Segurado | Propensão | Proporção  |
+  |------------------------|----------|------------|
+  | Não                    | Negativa      | 0.774546   |
+  | Não                    | Positiva      | 0.225454   |
+  | Sim                    | Negativa      | 0.999095   |
+  | Sim                    | Positiva      | 0.000905   |
 
 ### A Resposta Inteligente 💡
 
-Para resolver o problema, utilizamos técnicas avançadas para identificar, entre milhares de clientes, aqueles com maior potencial de conversão. Os resultados foram surpreendentes: Dos 20.000 top clientes do ranking, **16.700 clientes converteram**, capturando assim 83,6% de todos os 60.000 clientes da base de dados. Um verdadeiro impacto que vai além dos números.
+Para resolver o problema, utilizamos técnicas avançadas para identificar, entre milhares de clientes, aqueles com maior potencial de conversão. Os resultados foram surpreendentes: Dos 20.000 top clientes do ranking (equivalente a 30% da base de dados), **16.700 clientes converteram**, capturando assim 83,6% de todos os clientes propensos da base de dados.
 
 ### O Impacto em Números 📈
 
-Com base nos valores de prêmio anual, nossa projeção de conversão representa mais **R$ 500 milhões em faturamento**. Não é só sobre a precisão dos dados; é sobre resultados tangíveis que impulsionam o negócio e permitem um retorno muito além das expectativas.
+Com base nos valores de prêmio anual, nossa projeção de conversão representa mais **R$ 500 milhões em faturamento anual**. Não é só sobre a precisão dos dados; é sobre resultados tangíveis que impulsionam o negócio e permitem um retorno muito além das expectativas.
 
 ### Para o Futuro
 
