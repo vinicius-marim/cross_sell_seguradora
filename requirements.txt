@@ -1,0 +1,1 @@
+# Dependências gerais do projeto
