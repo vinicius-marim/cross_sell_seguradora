@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Previsões de Seguro de Saúde</title>
+    <!-- CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #b8860b, #424242 60%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            background: linear-gradient(135deg, #2c3e50 10%, #b8860b); /* Gradiente de azul a dourado */
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        #predict-button {
+            background-color: #7e2b2b; /* Dourado mais escuro */
+            color: white;
+            padding: 15px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        #predict-button:hover {
+            background-color: #f1c40f; /* Dourado ainda mais escuro no hover */
+        }
+
+        #status-message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #f1c40f; /* Dourado */
+        }
+
+        #result-message {
+            margin-top: 15px;
+            font-size: 20px;
+            color: #f1c40f; /* Alaranjado */
+        }
+
+        .loader {
+            border: 6px solid #f3f3f3;
+            border-radius: 50%;
+            border-top: 6px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Previsões de Seguro de Saúde</h1>
+        <button id="predict-button">Gerar Previsões</button>
+        <div class="loader" id="loading-spinner"></div>
+        <div id="status-message"></div>
+        <div id="result-message"></div>
+    </div>
+
+    <footer>
+        <p>&copy;  2024 Health Insurance Predictions. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.getElementById('predict-button').addEventListener('click', function() {
+            var predictButton = document.getElementById('predict-button');
+            var statusMessage = document.getElementById('status-message');
+            var resultMessage = document.getElementById('result-message');
+            var loader = document.getElementById('loading-spinner');
+
+            // Desabilita o botão e exibe o spinner de carregamento
+            predictButton.disabled = true;
+            statusMessage.innerHTML = 'Processando, por favor aguarde...';
+            resultMessage.innerHTML = '';
+            loader.style.display = 'block';
+
+            fetch('/predict', {
+                method: 'POST',
+            })
+            .then(response => {
+                loader.style.display = 'none';  // Esconder o spinner ao receber resposta
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Erro no processamento da API');
+                }
+            })
+            .then(data => {
+                statusMessage.innerHTML = '';  // Limpar a mensagem de "Processando..."
+                resultMessage.innerHTML = data.message;  // Exibir mensagem de sucesso
+                predictButton.disabled = false;
+            })
+            .catch(error => {
+                statusMessage.innerHTML = '';  // Limpar a mensagem de "Processando..."
+                resultMessage.innerHTML = 'Erro: ' + error.message;
+                predictButton.disabled = false;
+                loader.style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
